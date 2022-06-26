@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #02020e;
+    font-family: 'Lato' !important;
+  }
+
+header {
+    padding: 1rem;
+    justify-content: flex-end;
+    height: 11vh;
+    background-color: #130f40
+}
+
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin-left: 50px;
+  }
+ 
+  .input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #22a6b3;
+    padding-right: 40px;
+    color:#fff;
+  }
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+ 
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+  #main {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    margin: 20px;
+    color: rgb(147, 177, 202);
+  }
+
+  .movie-card {
+    background-color: #02020e;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 4px #130f40 ;
+    width: 300px;
+    margin: 1rem;
+  }
+  .movie-card img {
+    width: 100%;
+  }
+  .movie-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 1rem 1rem;
+  }
+  .movie-info .green {
+    font-weight: bold;
+  }
+
+  .overview{
+    background-color: #130f40;
+    cursor: pointer;
+    max-height: 100%;
+    position: absolute;
+    padding: 1rem; 
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(101%);
+    transition: transform 0.4s ease-in;
+  } 
+  
+  .movie-card:hover .overview {
+    transform:translateY(0)
+  }
+ 
+
